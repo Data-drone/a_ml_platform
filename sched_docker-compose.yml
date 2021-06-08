@@ -80,5 +80,5 @@ services:
       ml_platform: {}
 networks:
   ml_platform:
-    external: true
+    external: false
     name: ml_platform
