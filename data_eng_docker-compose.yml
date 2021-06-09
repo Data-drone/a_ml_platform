@@ -21,6 +21,8 @@ services:
       - "SPARK_LOCAL_IP=spark-master"
       - "PYSPARK_PYTHON=/usr/bin/python3"
       - "PYSPARK_DRIVER_PYTHON=/usr/bin/python3"
+      - "MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE"
+      - "MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
     networks: 
       ml_platform: {}
   spark-worker-1:
@@ -36,6 +38,8 @@ services:
       - SPARK_WORKER_OPTS=-Dspark.worker.resource.gpu.amount=2 -Dspark.worker.resource.gpu.discoveryScript=/opt/sparkRapidsPlugin/getGpusResources.sh
       - "PYSPARK_PYTHON=/usr/bin/python3"
       - "PYSPARK_DRIVER_PYTHON=/usr/bin/python3"
+      - "MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE"
+      - "MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
     deploy:
       resources:
         reservations:
@@ -55,6 +59,8 @@ services:
       - SPARK_MASTER=spark://spark-master:7077
       - "PYSPARK_PYTHON=/usr/bin/python3"
       - "PYSPARK_DRIVER_PYTHON=/usr/bin/python3"
+      - "MINIO_ACCESS_KEY=AKIAIOSFODNN7EXAMPLE"
+      - "MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
     ipc: host  
     networks:
       ml_platform: {}

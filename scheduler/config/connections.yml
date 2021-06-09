@@ -1,14 +1,3 @@
-SAMPLE_DB:
-  conn_type: mysql
-  host: 192.168.254.210
-  login: myuser
-  password: mypassword
-  schema: sample_db
-  port: 3306
-SAMPLE_HTTP:
-  conn_type: http
-  login: myuser
-  password: mypassword
 SPARK_LOCAL_CLUSTER:
   conn_type: spark
   host: spark-master
