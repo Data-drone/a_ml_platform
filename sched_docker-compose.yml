@@ -20,7 +20,9 @@ services:
     networks: 
       ml_platform: {}
   airflow-webserver:
-    build: ./scheduler
+    build: 
+      context: ./scheduler
+      dockerfile: Dockerfile_spark
     restart: always
     command: webserver
     depends_on:
@@ -38,7 +40,9 @@ services:
     networks: 
       ml_platform: {}
   airflow-worker-1:
-    build: ./scheduler
+    build: 
+      context: ./scheduler
+      dockerfile: Dockerfile_spark
     command: worker
     restart: always
     depends_on:
@@ -52,7 +56,9 @@ services:
     networks: 
       ml_platform: {}
   airflow-worker-2:
-    build: ./scheduler
+    build: 
+      context: ./scheduler
+      dockerfile: Dockerfile_spark
     command: worker
     restart: always
     depends_on:
@@ -66,7 +72,9 @@ services:
     networks: 
       ml_platform: {}
   airflow-flower:
-    build: ./scheduler
+    build: 
+      context: ./scheduler
+      dockerfile: Dockerfile_spark
     command: flower
     restart: always
     depends_on:

@@ -34,12 +34,18 @@ RUN apt-get install -y wget \
     && tar -xvzf spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
     && mv spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION} spark \
     && rm spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz \
+    && pip3 install pyspark==${SPARK_VERSION} \
     #&& cd /css \
     #&& jar uf /spark/jars/spark-core_2.11-${SPARK_VERSION}.jar org/apache/spark/ui/static/timeline-view.css \
     && cd /
 
 ENV SPARK_MASTER_NAME spark-master
 ENV SPARK_MASTER_PORT 7077
+ENV SPARK_HOME /root/spark
+ENV PATH="/root/spark/bin:${PATH}"
+
 ENV PYTHONHASHSEED 1
+
+WORKDIR /root/airflow
 
 ENTRYPOINT ["./entrypoint.sh"]
