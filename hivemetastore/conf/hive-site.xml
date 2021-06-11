@@ -1,7 +1,11 @@
 <configuration>
     <property>
+        <name>hive.stats.jdbc.timeout</name>
+        <value>30</value>
+    </property>
+    <property>
         <name>hive.metastore.uris</name>
-        <value>thrift://0.0.0.0:9083</value>
+        <value>thrift://hive_metastore:9083</value>
         <description>Thrift URI for the remote metastore. Used by metastore client to connect to remote metastore.</description>
     </property>
     <property>

@@ -2,6 +2,7 @@ version: '3.7'
 services:
   metastore_db:
     image: postgres:10.5
+    container_name: metastore_db 
     ports:
       - "5433:5432"
     healthcheck:
@@ -14,6 +15,8 @@ services:
     networks: 
       ml_platform: {}
   hive_metastore:
+    container_name: hive_metastore
+    hostname: hive_metastore
     build:
       context: ./hivemetastore
       dockerfile: Dockerfile
@@ -28,6 +31,7 @@ services:
       ml_platform: {}
   minio:
     image: minio/minio
+    container_name: minio
     ports:
       - "9001:9000"
     environment:
