@@ -1,3 +1,6 @@
 [submodule "spark_data_eng_template"]
 	path = spark_data_eng_template
 	url = https://github.com/Data-drone/spark_data_eng_template.git
+[submodule "airflow_template"]
+	path = airflow_template
+	url = https://github.com/Data-drone/airflow_template.git
