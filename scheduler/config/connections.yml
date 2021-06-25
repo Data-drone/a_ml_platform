@@ -1,4 +1,0 @@
-SPARK_LOCAL_CLUSTER:
-  conn_type: spark
-  host: spark-master
-  port: 7077
