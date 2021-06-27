@@ -4,3 +4,9 @@
 [submodule "airflow_template"]
 	path = airflow_template
 	url = https://github.com/Data-drone/airflow_template.git
+[submodule "amundsen_template"]
+	path = amundsen_template
+	url = https://github.com/Data-drone/amundsen_template.git
+[submodule "superset_template"]
+	path = superset_template
+	url = https://github.com/Data-drone/superset_template.git
