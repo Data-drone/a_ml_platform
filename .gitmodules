@@ -10,3 +10,6 @@
 [submodule "superset_template"]
 	path = superset_template
 	url = https://github.com/Data-drone/superset_template.git
+[submodule "ml_platform_dags"]
+	path = ml_platform_dags
+	url = https://github.com/Data-drone/ml_platform_dags.git
