@@ -9,6 +9,8 @@
 ### This isn't working as the first successful docker-compose holds the session open
 (cd superset_template ; docker-compose -f docker-compose.yml -p superset --env-file ../.env stop)
 
+(cd mlflow_template ; docker-compose -f docker-compose-ml_platform.yml -p superset --env-file ../.env stop)
+
 (cd amundsen_template ; docker-compose -f docker-compose.yml -p amundsen --env-file ../.env stop)
 
 (cd airflow_template ; docker-compose -f docker-compose.yml -p airflow --env-file ../.env stop)

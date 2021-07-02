@@ -13,3 +13,6 @@
 [submodule "ml_platform_dags"]
 	path = ml_platform_dags
 	url = https://github.com/Data-drone/ml_platform_dags.git
+[submodule "mlflow_template"]
+	path = mlflow_template
+	url = https://github.com/Data-drone/mlflow_template.git

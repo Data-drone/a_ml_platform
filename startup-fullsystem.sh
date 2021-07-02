@@ -13,6 +13,8 @@
 
 (cd amundsen_template ; docker-compose -f docker-compose.yml -p amundsen --env-file ../.env up -d --build)
 
+(cd mlflow_template ; docker-compose -f docker-compose-ml_platform.yml -p ml_flow --env-file ../.env up -d --build)
+
 (cd superset_template ; docker-compose -f docker-compose.yml -p superset --env-file ../.env up -d --build)
 
 #(cd feature_store ; docker-compose -f docker-compose.yml --env-file ../.env up)
