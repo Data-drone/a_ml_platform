@@ -15,7 +15,8 @@
 
 (cd mlflow_template ; docker-compose -f docker-compose-ml_platform.yml -p ml_flow --env-file ../.env up -d --build)
 
-(cd superset_template ; docker-compose -f docker-compose.yml -p superset --env-file ../.env up -d --build)
+# due to pyhive amundsen preview doesn't work
+#(cd superset_template ; docker-compose -f docker-compose.yml -p superset --env-file ../.env up -d --build)
 
 #(cd feature_store ; docker-compose -f docker-compose.yml --env-file ../.env up)
 # -p datalake --force-recreate --env-file ../.env --build up)

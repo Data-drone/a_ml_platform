@@ -7,9 +7,10 @@
 ## start the system
 
 ### This isn't working as the first successful docker-compose holds the session open
-(cd superset_template ; docker-compose -f docker-compose.yml -p superset --env-file ../.env stop)
+# due to pyhive amundsen preview doesn't work
+#(cd superset_template ; docker-compose -f docker-compose.yml -p superset --env-file ../.env stop)
 
-(cd mlflow_template ; docker-compose -f docker-compose-ml_platform.yml -p superset --env-file ../.env stop)
+(cd mlflow_template ; docker-compose -f docker-compose-ml_platform.yml -p ml_flow --env-file ../.env stop)
 
 (cd amundsen_template ; docker-compose -f docker-compose.yml -p amundsen --env-file ../.env stop)
 
