@@ -37,8 +37,14 @@ There are issues with having multiple postgres servers running and managing the 
 
 ## Thoughts structure and todos
 
--- Maybe break it up into different components
--- Scheduler as sub-project
--- Data Eng / Lake as sub-project
--- Data Discovery as sub-project
--- MLSection as sub-project
+-- Maybe break it up into different components - Done
+-- Scheduler as sub-project - Done
+-- Data Eng / Lake as sub-project - Done
+-- Data Discovery as sub-project - Done
+-- MLSection as sub-project - Done
+
+-- Test Prefect Scheduling
+
+-- kube version?
+
+-- Ganglia?
